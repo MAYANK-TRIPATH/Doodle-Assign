@@ -1,0 +1,153 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f0f0;
+    color: #fffafa;
+    padding: 15px;
+  }
+  
+  .navbar-brand a {
+    color: #656161; 
+    font-weight: bold; 
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+
+  .hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s;
+  }
+  
+  .hamburger-box {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hamburger-inner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: #373535;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #373535;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .hamburger-inner::before {
+    top: -6px;
+  }
+  
+  .hamburger-inner::after {
+    bottom: -6px;
+  }
+  
+  .navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+  }
+  
+  .navbar-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-link {
+    color: #5b5959;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+    
+    .navbar-list {
+      display: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .navbar-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    
+    .show-menu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .is-active .hamburger-inner {
+      transform: translateY(6px);
+    }
+    
+    .is-active .hamburger-inner::before {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+    
+    .is-active .hamburger-inner::after {
+      transform: rotate(-45deg) translate(4px, -4px);
+    }
+    
+    .navbar-brand {
+      order: 2;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+    
+    .navbar-list {
+      order: 3;
+    }
+  }
+ 
+  
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .search-form input[type="text"] {
+    width: 200px;
+    margin-right: 5px;
+  }
+  
+  .search-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
